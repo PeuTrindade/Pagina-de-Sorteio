@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Sorteio</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link href = "https://fonts.googleapis.com/css2? family = Leckerli + One & display = swap" rel = "folha de estilo">
+    <script>
+       function sortear() {
+         let min=document.getElementById("min").value;
+         let max=document.getElementById("max").value;
+         let sort=Math.floor((Math.random() *max) + min);
+
+         document.getElementById("sorteado").innerHTML=sort;
+       }
+
+
+
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Sorteio</h1>
+        <p>By Pedro Trindade</p>
+        <input id="min" type="number" name="Número Mínimo" placeholder="Número Mínimo"> <br>
+        <input id="max" type="number" name="Número Máximo" placeholder="Número Máximo"> <br>
+        <button onclick="sortear()">Sortear</button>
+        <h2 id="sorteado"></h2>
+        <p class="mensagem">O número mínimo deve ser 0</p>
+    </div>
+
+
+
+
+
+</body>
+</html>
